@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spot</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: grey;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      flex: 1;
+      display: flex;
+    }
+
+    aside {
+      background-color: black;
+      width: 240px;
+      padding: 20px;
+    }
+
+    aside img {
+      width: 130px;
+      margin-bottom: 30px;
+    }
+
+    aside nav ul, aside ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    aside a {
+      color: green;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    aside a:hover {
+      color: red;
+    }
+
+    hr {
+      border: 1px solid gray;
+      margin: 10px 0;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .Search-bar input {
+      padding: 5px 10px;
+    }
+
+    .right-icon span {
+      margin-left: 10px;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .card {
+      padding: 20px;
+      width: 170px;
+      background-color: #1e1e1e;
+      color: white;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      height: auto;
+    }
+
+    .card p {
+      font-size: 13px;
+    }
+
+    .card:hover {
+      transform: scale(1.06);
+    }
+
+    footer.player {
+      background-color: #181818;
+      color: white;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+    }
+
+    .song-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .song-info img {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      background-color: #333;
+    }
+
+    .controls button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      margin: 0 8px;
+    }
+
+    .volumeContr {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .artist-grid{
+      display: flex;
+      flex-direction: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+    .artist img{
+      height: auto;
+      width: 200px;
+      border-radius: 50%;
+    }
+    .artist{
+      transition: 0.2s;
+    }
+    .artist:hover{
+      transform:scale(1.06)
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify Logo">
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Search</li>
+          <li>Your library</li>
+        </ul>
+        <hr>
+        <ul>
+          <li>Playlist 1</li>
+          <li>Playlist 2</li>
+          <li>Playlist 3</li>
+        </ul>
+        <hr>
+        <p><a href="#">Install app</a></p>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header>
+        <div class="Search-bar">
+          <input type="text" placeholder="Search Music">
+        </div>
+        <div class="right-icon">
+          <span>🔔</span>
+          <span>👤</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="card-grid">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?fit=crop&w=300&h=300" alt="Sample Music Cover">
+            <h3>Chill vibes</h3>
+            <p>Nepali hits</p>
+          </div>
+          <div class="card">
+            <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg" alt="Top 50">
+            <h3>Top 50 Global hits</h3>
+            <p>Hottest global musics</p>
+          </div>
+          <div class="card">
+            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84bc0d7dddac407ce260f0f7b5" alt="Phonk music">
+            <h3>Phonk music</h3>
+            <p>Chill Brazilian phonk music</p>
+          </div>
+          <div class="card">
+            <img src="https://i1.sndcdn.com/artworks-gTz9e8t14y6Mw3v0-Inf3rw-t500x500.jpg" alt="Fifa music">
+            <h3>Fifa 23 SoundTracks</h3>
+            <p>featured songs</p>
+            
+          </div>
+           <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu7YMeUkBNJwhxnXpLFZgPVpqtiDFaWUcK8g&s" alt="wweimg">
+            <h3>2k25 SoundTracks</h3>
+            <p>featured songs</p>
+            </div>
+             <div class="card">
+            <img src="https://geo-media.beatsource.com/image_size/500x500/d/4/e/d4e98da6-1c6a-49c4-a92f-eba48e739d4d.jpg" alt="Phonk music">
+            <h3>Post Malone Hits</h3>
+            <p>featured songs</p>
+          </div>
+        </section>
+        <Strong style="margin: 10px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;">Popular Artist</Strong>
+        <section class="artist-grid">
+         
+          <div class="artist">
+            <img src="https://i.scdn.co/image/ab67706f00000002a1189b4d2b3a6b335ae6ac25">
+            <h3>Marshmello</h3>
+          </div>
+          <div class="artist">
+            <img src="https://i.scdn.co/image/ab67616d0000b27332eea7f53d370cf83454c132" alt="artist2">
+            <h3>MGK</h3>
+          </div>
+          <div class="artist">
+            <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2hXG9R-default.jpg " alt="artist3">
+            <h3>B-8ight</h3>
+          </div>
+          <div class="artist">
+            <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2hXG9R-default.jpg " alt="artist3">
+            <h3>B-8ight</h3>
+          </div>
+          <div class="artist">
+            <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2hXG9R-default.jpg " alt="artist3">
+            <h3>B-8ight</h3>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer class="player">
+    <div class="song-info">
+      <img src="" alt="">
+      <div>
+        <strong>Now playing</strong><br>
+        <small>artist Name</small>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button>&lt;&lt;</button>
+      <button>&#9654;</button>
+      <button>&gt;&gt;</button>
+    </div>
+
+    <div class="volumeContr">
+      🔊
+      <input type="range" min="0" max="100" value="50">
+    </div>
+  </footer>
+
+</body>
+</html>
