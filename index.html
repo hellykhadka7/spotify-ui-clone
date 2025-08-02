@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spot</title>
+  <title>Spotify UI Clone</title>
   <style>
     * {
       box-sizing: border-box;
@@ -147,30 +147,88 @@
       align-items: center;
       gap: 8px;
     }
-    .artist-grid{
+
+    .artist-grid {
       display: flex;
-      flex-direction: wrap;
+      flex-wrap: wrap;
       gap: 20px;
       padding: 20px;
     }
-    .artist img{
+
+    .artist img {
       height: auto;
       width: 200px;
       border-radius: 50%;
     }
-    .artist{
+
+    .artist {
       transition: 0.2s;
     }
-    .artist:hover{
-      transform:scale(1.06)
+
+    .artist:hover {
+      transform: scale(1.06);
     }
 
+    /* =============================
+       Mobile Responsive Design
+    ============================== */
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+      }
+
+      aside {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 15px;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .Search-bar input {
+        width: 100%;
+      }
+
+      .right-icon {
+        display: none;
+      }
+
+      .card-grid, .artist-grid {
+        justify-content: center;
+      }
+
+      .card, .artist {
+        width: 45%;
+      }
+
+      footer.player {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .song-info, .controls, .volumeContr {
+        justify-content: center;
+      }
+    }
 
   </style>
 </head>
 
 <body>
-
   <div class="wrapper">
     <aside>
       <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify Logo">
@@ -223,40 +281,40 @@
             <img src="https://i1.sndcdn.com/artworks-gTz9e8t14y6Mw3v0-Inf3rw-t500x500.jpg" alt="Fifa music">
             <h3>Fifa 23 SoundTracks</h3>
             <p>featured songs</p>
-            
           </div>
-           <div class="card">
+          <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu7YMeUkBNJwhxnXpLFZgPVpqtiDFaWUcK8g&s" alt="wweimg">
             <h3>2k25 SoundTracks</h3>
             <p>featured songs</p>
-            </div>
-             <div class="card">
-            <img src="https://geo-media.beatsource.com/image_size/500x500/d/4/e/d4e98da6-1c6a-49c4-a92f-eba48e739d4d.jpg" alt="Phonk music">
+          </div>
+          <div class="card">
+            <img src="https://geo-media.beatsource.com/image_size/500x500/d/4/e/d4e98da6-1c6a-49c4-a92f-eba48e739d4d.jpg" alt="Post Malone">
             <h3>Post Malone Hits</h3>
             <p>featured songs</p>
           </div>
         </section>
-        <Strong style="margin: 10px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;">Popular Artist</Strong>
+
+        <strong style="margin: 10px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;">Popular Artist</strong>
+
         <section class="artist-grid">
-         
           <div class="artist">
-            <img src="https://i.scdn.co/image/ab67706f00000002a1189b4d2b3a6b335ae6ac25">
+            <img src="https://i.scdn.co/image/ab67706f00000002a1189b4d2b3a6b335ae6ac25" alt="Marshmello">
             <h3>Marshmello</h3>
           </div>
           <div class="artist">
-            <img src="https://i.scdn.co/image/ab67616d0000b27332eea7f53d370cf83454c132" alt="artist2">
+            <img src="https://i.scdn.co/image/ab67616d0000b27332eea7f53d370cf83454c132" alt="MGK">
             <h3>MGK</h3>
           </div>
           <div class="artist">
-            <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2hXG9R-default.jpg " alt="artist3">
+            <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2hXG9R-default.jpg" alt="B-8ight">
             <h3>B-8ight</h3>
           </div>
           <div class="artist">
-            <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2hXG9R-default.jpg " alt="artist3">
+            <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2hXG9R-default.jpg" alt="B-8ight">
             <h3>B-8ight</h3>
           </div>
           <div class="artist">
-            <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2hXG9R-default.jpg " alt="artist3">
+            <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2hXG9R-default.jpg" alt="B-8ight">
             <h3>B-8ight</h3>
           </div>
         </section>
@@ -269,7 +327,7 @@
       <img src="" alt="">
       <div>
         <strong>Now playing</strong><br>
-        <small>artist Name</small>
+        <small>Artist Name</small>
       </div>
     </div>
 
@@ -284,6 +342,5 @@
       <input type="range" min="0" max="100" value="50">
     </div>
   </footer>
-
 </body>
 </html>
